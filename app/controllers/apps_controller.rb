@@ -1,6 +1,6 @@
 class AppsController < ApplicationController
   def index
-    @app = App.new(app_params)
+    @apps = App.all
   end
 
   def show
