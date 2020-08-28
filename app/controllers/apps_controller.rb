@@ -13,10 +13,14 @@ class AppsController < ApplicationController
 
   def create
     @app = App.new(app_params)
-    if @app.save
-    redirect_to apps_path, notice: "つぶやき成功！！"
-    else
-      render :new
+      if params[:back]
+        render :new
+      else
+        if @app.save
+          redirect_to apps_path, notice: "つぶやき成功！！"
+      else
+        render :new
+      end
     end
   end
 
@@ -33,6 +37,7 @@ class AppsController < ApplicationController
 
   def confirm
     @app = App.new(app_params)
+    render :new if @app.invalid?
   end
 
   def destroy

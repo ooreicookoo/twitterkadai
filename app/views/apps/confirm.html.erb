@@ -3,4 +3,5 @@
   <%= form.hidden_field :content %>
   <p>タイトル:<%= @app.content %></p>
   <%= form.submit "つぶやく" %>
+  <%= form.submit "戻る", name: 'back' %>
 <% end %>
