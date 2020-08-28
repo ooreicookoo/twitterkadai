@@ -21,6 +21,7 @@ class AppsController < ApplicationController
   end
 
   def edit
+    @app = app.find(params[:id])
   end
 
   def confirm
