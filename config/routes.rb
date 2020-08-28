@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :apps
+  resources :apps do
+    collection do
+      post :confirm
+    end
+  end
 end

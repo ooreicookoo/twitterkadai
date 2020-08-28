@@ -1,10 +1,10 @@
 class AppsController < ApplicationController
+  before_action :set_app, only: [:show, :edit, :update, :destroy]
   def index
     @apps = App.all
   end
 
   def show
-    @app = App.find(params[:id])
   end
 
   def new
@@ -21,11 +21,9 @@ class AppsController < ApplicationController
   end
 
   def edit
-    @app = App.find(params[:id])
   end
 
   def update
-    @app = App.find(params[:id])
     if @app.update(app_params)
       redirect_to app_path, notice: "つぶやきを編集しました"
     else
@@ -34,11 +32,21 @@ class AppsController < ApplicationController
   end
 
   def confirm
+    @app = App.new(app_params)
+  end
+
+  def destroy
+    @app.destroy
+    redirect_to apps_path, notice: "つぶやきを削除しました"
   end
 
   private
   def app_params
     params.require(:app).permit(:content)
+  end
+
+  def set_app
+    @app = App.find(params[:id])
   end
 
 end
