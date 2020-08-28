@@ -21,7 +21,16 @@ class AppsController < ApplicationController
   end
 
   def edit
-    @app = app.find(params[:id])
+    @app = App.find(params[:id])
+  end
+
+  def update
+    @app = App.find(params[:id])
+    if @app.update(app_params)
+      redirect_to app_path, notice: "つぶやきを編集しました"
+    else
+      render :edit
+    end
   end
 
   def confirm
