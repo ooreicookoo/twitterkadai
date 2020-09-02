@@ -1,13 +1,10 @@
  html {
   font-size: 62.5%;
-  height: 100%;
  }
-
 
  body {
    color:#00054d;
    font-size:20px;
-   height: 100%;
    margin: 0;
  }
 
@@ -42,14 +39,7 @@ footer{
   padding-top: 50px;
  }
 
- .container {
-   width: 980px;
-   padding: 30px;
-   position: relative;
-   min-height: 100%;
- }
-
-.wrapper{
+ .wrapper{
    min-height: 100vh;
    position: relative;
    box-sizing: border-box;
@@ -82,17 +72,4 @@ footer{
    text-decoration: none;
    display: block;
    padding: 15px;
- }
- .top_menu li a:hover {
-   text-decoration: underline;
- }
- .logo_image {
-   width: 110px;
-   float: left;
-   margin: 0;
- }
- .clearfix:after {
-   content: "";
-   display: block;
-   clear: both;
  }
