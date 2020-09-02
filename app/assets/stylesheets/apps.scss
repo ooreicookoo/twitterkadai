@@ -10,6 +10,7 @@
 
  a {
    margin-right: 50px;
+   height: 20px;
  }
 
  h1 {
@@ -73,3 +74,22 @@ footer{
    display: block;
    padding: 15px;
  }
+
+ td {
+   width: 274px;
+   overflow: auto;
+ }
+
+ table{
+  border-collapse:collapse;
+ }
+
+ table th{
+  border:1px solid #000066;
+  background:#00aaff;
+ }
+
+ table td{
+    border:1px solid #000066;
+    background:#ffffff;
+  }
