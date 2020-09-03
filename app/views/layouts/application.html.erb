@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <meta charaset="utf-8">
     <title>Twitterkadai</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,11 +14,11 @@
 
   <body>
     <header class="header">
-      <%= link_to image_tag('logo.png'), 'http://localhost:3000/apps' %>
+      <%= link_to image_tag('logo.png'), apps_path %>
       <nav>
       <ul class="top_menu clearfix">
-        <li><a href="http://localhost:3000/apps">HOME</a></li>
-        <li><a href="http://localhost:3000/apps/new">新しくつぶやく</a></li>
+        <li><%= link_to 'つぶやき一覧', apps_path %></li>
+        <li><%= link_to '新しくつぶやく', new_app_path %></li>
       </ul>
     </nav>
     </header>
