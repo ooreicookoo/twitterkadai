@@ -1,7 +1,7 @@
 <h3>以下の内容でつぶやき送信</h3>
 <%= form_with(model: @app, local: true) do |form| %>
   <%= form.hidden_field :content %>
-  <p>タイトル:<%= @app.content %></p>
+  <p>つぶやき:<%= @app.content %></p>
   <%= form.submit "つぶやく" %>
   <%= form.submit "戻る", name: 'back' %>
 <% end %>
